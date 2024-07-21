@@ -13,7 +13,6 @@ Dark green: #28b485
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-
 }
 
 html {
@@ -41,17 +40,17 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -66,7 +65,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -76,14 +75,13 @@ body {
   animation-timing-function: ease-out;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
   animation-name: moveInRight;
   animation-timing-function: ease-out;
-
 }
 
 @keyframes moveInLeft {
@@ -118,7 +116,6 @@ body {
   }
 }
 
-
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -131,7 +128,6 @@ body {
   }
 }
 
-
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -139,22 +135,22 @@ body {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: all .2s;
+  transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem rgb(0, 0, 0, .2);
+  box-shadow: 0 1rem 2rem rgb(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .2);
+  box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -169,10 +165,10 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -181,7 +177,101 @@ body {
   opacity: 0;
 }
 
-.btn-animated {
-  animation: moveInBottom .5s ease-out .75s;
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Extra small devices (phones, less than 600px) */
+@media only screen and (max-width: 600px) {
+  .header__text-box {
+    top: 50%;
+  }
+
+  .heading-primary--main {
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
+  }
+
+  .heading-primary--sub {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+  }
+
+  .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
+  }
+
+  body {
+    padding: 1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .heading-primary--main {
+    font-size: 4rem;
+    letter-spacing: 2rem;
+  }
+
+  .heading-primary--sub {
+    font-size: 1.75rem;
+    letter-spacing: 1.25rem;
+  }
+
+  .btn {
+    padding: 1.2rem 3rem;
+    font-size: 1.5rem;
+  }
+
+  body {
+    padding: 2rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 900px and up) */
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .heading-primary--main {
+    font-size: 5rem;
+    letter-spacing: 3rem;
+  }
+
+  .heading-primary--sub {
+    font-size: 2rem;
+    letter-spacing: 1.5rem;
+  }
+
+  .btn {
+    padding: 1.4rem 3.5rem;
+    font-size: 1.6rem;
+  }
+
+  body {
+    padding: 2.5rem;
+  }
+}
+
+/* Large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .heading-primary--main {
+    font-size: 6rem;
+    letter-spacing: 3.5rem;
+  }
+
+  .heading-primary--sub {
+    font-size: 2.5rem;
+    letter-spacing: 1.75rem;
+  }
+
+  .btn {
+    padding: 1.5rem 4rem;
+    font-size: 1.8rem;
+  }
+
+  body {
+    padding: 3rem;
+  }
 }
