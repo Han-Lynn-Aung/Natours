@@ -9,10 +9,7 @@
     border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
-
-    //Change for the <button> element
-    border: none;
-    cursor: pointer;
+    font-size: $default-font-size;
   }
 
   &:hover {
@@ -25,9 +22,7 @@
     }
   }
 
-  &:active,
-  &:focus {
-    outline: none;
+  &:active {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
@@ -72,6 +67,7 @@
 .btn-text {
   &:link,
   &:visited {
+    font-size: $default-font-size;
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
